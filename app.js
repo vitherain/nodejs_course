@@ -1,11 +1,17 @@
-var person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    greet: function() {
-        console.log('Hello', this.firstName, this.lastName);
-    }
-};
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
 
-person.greet();
+var john = new Person('John', 'Doe');
+var melissa = new Person('Melissa', 'Manning');
 
-console.log(person['firstName'], person['lastName'])
+Person.prototype.greet = function() {
+    console.log('Hello', this.firstName, this.lastName);
+}
+
+john.greet();
+melissa.greet();
+
+console.log(john.__proto__);
+console.log(john.__proto__ === melissa.__proto__);
