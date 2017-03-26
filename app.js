@@ -1,4 +1,4 @@
-function Person(firstName, lastName) {
+/*function Person(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
 }
@@ -14,4 +14,13 @@ john.greet();
 melissa.greet();
 
 console.log(john.__proto__);
-console.log(john.__proto__ === melissa.__proto__);
+console.log(john.__proto__ === melissa.__proto__);*/
+
+var firstName = 'Jane';
+
+(function (lastName) {
+    var firstName = 'John';
+    console.log(firstName, lastName);
+})('Doe');
+
+console.log(firstName);
